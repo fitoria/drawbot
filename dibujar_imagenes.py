@@ -54,7 +54,7 @@ def nueva_linea(p):
     drawbot.bajar_lapiz()
 
 drawbot.bajar_lapiz()
-arc=open("/home/vbasel/unc--.txt","r")
+arc=open("imagen_icaro.txt","r")
 for linea in arc:
     pa=0
     for b in linea:
