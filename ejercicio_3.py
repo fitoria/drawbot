@@ -22,10 +22,10 @@
 #  
 #  
 
-from drawbot import ROBOT
+from libreria.drawbot import ROBOT
 drawbot=ROBOT()
 drawbot.iniciar()
-aa=5
+aa=15
 ll=5
 drawbot.bajar_lapiz()
 for n in range(4):

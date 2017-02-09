@@ -22,10 +22,12 @@
 #  
 #  
 
-from drawbot import ROBOT
+from libreria.drawbot import ROBOT
 drawbot=ROBOT()
 drawbot.iniciar()
 valor_viejo=0
+drawbot.bajar_lapiz()
+
 for a in range(100):
     drawbot.derecha(1)
     valor=drawbot.leer_analogico(1)
@@ -35,4 +37,5 @@ for a in range(100):
     if valorfinal<valor_viejo:
         drawbot.bajar(valorfinal)
     valor_viejo=valorfinal
+drawbot.levantar_lapiz()
 

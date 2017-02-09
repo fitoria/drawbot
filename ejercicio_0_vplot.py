@@ -22,41 +22,17 @@
 #  
 #  
 
-from libreria.drawbot import ROBOT
-import random
-drawbot=ROBOT()
-drawbot.cerrar()
+from libreria.vplot import ROBOT
 
-drawbot.iniciar()
+r=ROBOT()
+r.iniciar()
+for m in range(12):
+    r.bajar_lapiz()
+    for a in range(1,50,10):
+        r.adelante(5+a)
+        r.derecha(360/5)
+    r.levantar_lapiz()
+    r.poner_a_cero()
+    r.derecha(90)
+    r.adelante(50)
 
-drawbot.bajar(1)
-#~ drawbot.levantar_lapiz()
-drawbot.bajar_lapiz()
-
-#~ exit()
-n=70
-for b in range(10):
-    #~ drawbot.levantar_lapiz()
-    a=random.randint(0,n)
-    drawbot.bajar(a)
-    a=random.randint(0,n)
-    drawbot.izquierda(a)
-    a=random.randint(0,n)
-    drawbot.subir(a)
-    a=random.randint(0,n)
-    drawbot.derecha(a)
-    a=random.randint(0,n)
-    #~ drawbot.bajar_lapiz()
-    m=0
-    while (m<40):
-        m=m+2
-        drawbot.subir(m)
-        m=m+2
-        drawbot.izquierda(m)
-        m=m+2
-        drawbot.bajar(m)
-        m=m+2
-        drawbot.derecha(m)
-
-drawbot.levantar_lapiz()
-drawbot.cerrar()

@@ -22,7 +22,7 @@
 #  
 #  
 
-from drawbot import ROBOT
+from libreria.drawbot import ROBOT
 drawbot=ROBOT()
 
 drawbot.iniciar()

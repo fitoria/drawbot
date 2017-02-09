@@ -76,7 +76,7 @@ class puerto():
         except:
             print "puerto no encontrado"
             return False
- 
+
     def iniciar(self):
         """
         abre el puerto, setea todos los valores por defecto.
