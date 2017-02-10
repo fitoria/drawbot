@@ -55,14 +55,14 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
         """
         if pasos==0:return
         if pasos>0:
-            print "subir: ", pasos, " pasos"
+            #print "subir: ", pasos, " pasos"
             for a in range(abs(pasos)):
                 a=self.__motor1.girar(1)
                 b=self.__motor2.girar(1)
                 self.activar(a+b)
                 time.sleep(self.velocidad)
         else:
-            print "bajar: ", pasos, " pasos"
+            #print "bajar: ", pasos, " pasos"
             for a in range(abs(pasos)):
                 a=self.__motor1.girar(-1)
                 b=self.__motor2.girar(-1)
@@ -80,14 +80,14 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
         if pasos==0:return
 
         if pasos>0:
-            print "derecha: ", pasos, " pasos"
+            #print "derecha: ", pasos, " pasos"
             for a in range(abs(pasos)):
                 a=self.__motor1.girar(-1)
                 b=self.__motor2.girar(1)
                 self.activar(a+b)
                 time.sleep(self.velocidad)
         else:
-            print "izquierda: ", pasos, " pasos"
+            #print "izquierda: ", pasos, " pasos"
             for a in range(abs(pasos)):
                 a=self.__motor1.girar(1)
                 b=self.__motor2.girar(-1)
@@ -108,6 +108,7 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
         Baja el servo
         servo1 = 30
         """
+        print "bajo el lapiz"
         self.activar_servo(1, 30)
         time.sleep(1)
         return 0
@@ -117,6 +118,7 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
         Levanta el servo
         servo1 = 128
         """
+        print "subo el lapiz"
         self.activar_servo(1,128)
         time.sleep(1)
         return 0

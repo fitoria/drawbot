@@ -38,12 +38,15 @@ class ROBOT(VPLOTTER):
         pass
 
     def derecha(self,angulo):
-        self._O=self._O+angulo
-
-    def izquierda(self,angulo):
+        print "giro a la derecha ", angulo," grados"
         self._O=self._O-angulo
 
+    def izquierda(self,angulo):
+        print "giro a la izquierda ", angulo," grados"
+        self._O=self._O+angulo
+
     def adelante(self,R):
+        print "avanzo ",R," pasos"
         puntos=self.mover(R,self._O)
         for a in range(1,len(puntos)):
             x0,y0=puntos[a-1]
@@ -56,6 +59,7 @@ class ROBOT(VPLOTTER):
                 self.xx(xf)
 
     def atras(self,R):
+        print "retrocedo ",R," pasos"
         R=R*-1
         puntos=self.mover(R,self._O)
         for a in range(1,len(puntos)):

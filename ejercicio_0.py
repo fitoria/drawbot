@@ -22,15 +22,45 @@
 #  
 #  
 
-from libreria.drawbot import ROBOT
-drawbot=ROBOT()
-drawbot.cerrar()
-drawbot.iniciar()
-drawbot.bajar_lapiz()
-drawbot.derecha(100)
-drawbot.subir(100)
-drawbot.izquierda(100)
-drawbot.bajar(100)
-drawbot.girar_m1(100)
-drawbot.girar_m2(100)
-drawbot.levantar_lapiz()
+###############################################################################
+#
+# Este es un primer ejercicio de prueba para nuestro robot dibujante.
+# todo lo que este despues del simbolo # no es tenido en cuenta por el
+# interprete PYTHON, se usa para dejar comentarios para las personas que 
+# tengan que leer el codigo fuente.
+#
+###############################################################################
+
+# La siguiente linea de codigo, importa la libreria necesaria para poder 
+# controlar nuestro robot, para poder darle ordenes de forma sencilla.
+# Las librerias nos permiten re utilizar codigo fuente, para no tener que
+# escribir de vuelta lo mismo una y otra ves.
+
+from libreria.vplot import ROBOT 
+
+robot=ROBOT() # este es el "nombre" de nuestro robot.
+robot.iniciar() # iniciamos la conexion
+
+# Con las 3 lineas de codigo anterior, logramos poner en marcha nuestro robot.
+# a partir de ahora, las instrucciones moveran el cabezal para poder dibujar.
+
+robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
+
+# el cabezal de dibujo de nuestro robot puede moverse para adelante, atras y
+# girar a la derecha o a la izquierda (en grados).
+
+#con el siguiente codigo el robot dibujara un cuadrado de 100 puntos de lado
+robot.adelante(100)
+robot.derecha(90)
+robot.adelante(100)
+robot.derecha(90)
+robot.adelante(100)
+robot.derecha(90)
+robot.adelante(100)
+
+#  Una ves terminado el dibujo, levanta el lapiz y cierra el programa
+robot.levantar_lapiz()
+robot.cerrar()
+
+
+

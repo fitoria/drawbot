@@ -23,7 +23,7 @@
 #
 
 from PIL import Image
-from libreria.drawbot import ROBOT
+from libreria.vplot import ROBOT
 drawbot = ROBOT()
 drawbot.cerrar()
 drawbot.iniciar()
@@ -33,16 +33,20 @@ def blanco():
     :returns: TODO
 
     """
-    drawbot.derecha(caracter)
+    drawbot.adelante(caracter)
 def negro():
     """TODO: Docstring for negro.
     :returns: TODO
 
     """
     for b in range(caracter):
-        drawbot.subir(caracter)
-        drawbot.derecha(1)
-        drawbot.bajar(caracter)
+        drawbot.izquierda(90)
+        drawbot.adelante(caracter)
+        drawbot.derecha(90)
+        drawbot.adelante(1)
+        drawbot.derecha(90)
+        drawbot.adelante(caracter)
+        drawbot.izquierda(90)
 
 def nueva_linea(p):
     """TODO: Docstring for nueva_linea.
@@ -50,8 +54,11 @@ def nueva_linea(p):
 
     """
     drawbot.levantar_lapiz()
-    drawbot.izquierda(p*caracter)
-    drawbot.bajar(caracter)
+    drawbot.derecha(180)
+    drawbot.adelante(p*caracter)
+    drawbot.izquierda(90)
+    drawbot.adelante(caracter)
+    drawbot.izquierda(90)
     drawbot.bajar_lapiz()
 
 drawbot.bajar_lapiz()
