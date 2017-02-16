@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# ejercicio_7.py
+# ejercicio_1.py
 #
 # Copyright © 2017 Valentin Basel <valentinbasel@gmail.com>
 #
@@ -19,6 +19,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+###############################################################################
+#
+# En el ejercicio anterior dibujamos un cuadrado con los comandos para mover
+# el cabezal del robot.
+# Sin embargo, repetimos 4 veces la mismas lineas - adelante(100), derecha(90)-
+# En este ejercicio vamos a usar un bucle de repeticion "for" que nos permite 
+# repetir muchas veces la misma porcion de codigo fuente.
+# los bucles o repeticiones, son una de las partes mas importante de programar.
 
 from libreria.vplot import ROBOT 
 
@@ -26,16 +34,15 @@ robot=ROBOT() # este es el "nombre" de nuestro robot.
 robot.iniciar() # iniciamos la conexion
 
 robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
-lados=10
-largo=20
-for a in range(360/((360/lados)/2) ):
-    for b in range(lados):
-        robot.adelante(largo)
-        robot.derecha(360/lados)
-    robot.derecha((360/lados)/2)
-
+b=5
+for a in range(40):
+    robot.adelante(b)
+    robot.derecha(85)
+    b=b+2
 
 #  Una ves terminado el dibujo, levanta el lapiz y cierra el programa
-
 robot.levantar_lapiz()
 robot.cerrar()
+
+
+
