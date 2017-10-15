@@ -32,7 +32,7 @@ class MOTOR():
         self.m1=__pasos_motor
         self.pasos_motor=0
         self.maxima_cant_pasos=len(self.m1)
-
+        self.alta_definicion()
     def alta_definicion(self):
         """TODO: Docstring for alta_definicion.
         :returns: TODO

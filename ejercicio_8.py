@@ -19,7 +19,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-###############################################################################
+#########################5######################################################
 #
 # En el ejercicio anterior dibujamos un cuadrado con los comandos para mover
 # el cabezal del robot.
@@ -31,14 +31,18 @@
 from libreria.vplot import ROBOT 
 
 robot=ROBOT() # este es el "nombre" de nuestro robot.
-robot.iniciar() # iniciamos la conexion
+#robot.PUERTO="/dev/ttyACM1"
 
+robot.iniciar() # iniciamos la conexion
+#~ robot.subir_lapiz()
 robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
-b=5
-for a in range(40):
+b=15
+lados=5
+
+for a in range(100):
     robot.adelante(b)
-    robot.derecha(85)
-    b=b+2
+    robot.derecha((360/lados)-1)
+    b=b+5
 
 #  Una ves terminado el dibujo, levanta el lapiz y cierra el programa
 robot.levantar_lapiz()

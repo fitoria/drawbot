@@ -39,6 +39,8 @@
 from libreria.vplot import ROBOT 
 
 robot=ROBOT() # este es el "nombre" de nuestro robot.
+#robot.PUERTO="/dev/ttyACM1"
+
 robot.iniciar() # iniciamos la conexion
 
 # Con las 3 lineas de codigo anterior, logramos poner en marcha nuestro robot.
@@ -50,17 +52,15 @@ robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
 # girar a la derecha o a la izquierda (en grados).
 
 #con el siguiente codigo el robot dibujara un cuadrado de 100 puntos de lado
-robot.adelante(100)
+robot.adelante(300)
 robot.derecha(90)
-robot.adelante(100)
+robot.adelante(300)
 robot.derecha(90)
-robot.adelante(100)
+robot.adelante(300)
 robot.derecha(90)
-robot.adelante(100)
+robot.adelante(300)
 
 #  Una ves terminado el dibujo, levanta el lapiz y cierra el programa
 robot.levantar_lapiz()
 robot.cerrar()
-
-
 

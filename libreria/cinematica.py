@@ -36,7 +36,7 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
 
     """Docstring for MyClass. """
 
-    velocidad=0.02
+    velocidad=0.01
     __motor1=pap.MOTOR([1,2,4,8])
     __motor2=pap.MOTOR([16,32,64,128])
     def __init__(self):
@@ -109,7 +109,7 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
         servo1 = 30
         """
         print "bajo el lapiz"
-        self.activar_servo(1, 30)
+        self.activar_servo(1, 60)
         time.sleep(1)
         return 0
 
@@ -119,7 +119,7 @@ class VPLOTTER(apicaro.puerto,util.UTIL):
         servo1 = 128
         """
         print "subo el lapiz"
-        self.activar_servo(1,128)
+        self.activar_servo(1,120)
         time.sleep(1)
         return 0
 

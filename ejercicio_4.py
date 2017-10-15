@@ -28,8 +28,8 @@ robot.iniciar() # iniciamos la conexion
 robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
 repeticiones=100
 angulo=5
-for a in range(0,repeticiones,5):
-    robot.adelante(10+a)
+for a in range(0,repeticiones,3):
+    robot.adelante(1+a)
     robot.derecha(360/angulo)
 
 #  Una ves terminado el dibujo, levanta el lapiz y cierra el programa

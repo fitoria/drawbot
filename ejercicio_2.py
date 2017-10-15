@@ -32,7 +32,7 @@ robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
 
 for a in range(4): # bucle A
     for b in range(3): # bucle B
-        robot.adelante(100)
+        robot.adelante(200)
         robot.derecha(120)
     robot.derecha(90)   # gira para que el robot no dibuje el mismo triangulo 
                         # sobre la misma superficie

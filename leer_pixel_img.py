@@ -22,7 +22,7 @@
 #  
 #  
 from PIL import Image
-i = Image.open("/home/vbasel/python.png")
+i = Image.open("about.png")
 pix = i.load()
 xx,yy=i.size
 for y in range(yy):

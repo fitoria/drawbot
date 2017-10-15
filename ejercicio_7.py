@@ -26,14 +26,13 @@ robot=ROBOT() # este es el "nombre" de nuestro robot.
 robot.iniciar() # iniciamos la conexion
 
 robot.bajar_lapiz() # bajo el lapiz para que apoye sobre el papel
-lados=10
-largo=20
+lados=20
+largo=50
 for a in range(360/((360/lados)/2) ):
     for b in range(lados):
         robot.adelante(largo)
         robot.derecha(360/lados)
     robot.derecha((360/lados)/2)
-
 
 #  Una ves terminado el dibujo, levanta el lapiz y cierra el programa
 
